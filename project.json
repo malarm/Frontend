@@ -1,0 +1,115 @@
+{
+  "name": "thor-frontend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/thor-frontend/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "swc",
+        "outputPath": "dist/apps/thor-frontend",
+        "index": "apps/thor-frontend/src/index.html",
+        "baseHref": "/",
+        "main": "apps/thor-frontend/src/main.tsx",
+        "tsConfig": "apps/thor-frontend/tsconfig.app.json",
+        "assets": [
+          "apps/thor-frontend/src/favicon.ico",
+          "apps/thor-frontend/src/assets"
+        ],
+        "styles": [
+          "apps/thor-frontend/src/styles.css"
+        ],
+        "scripts": [],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/thor-frontend/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "staging": {
+          "fileReplacements": [
+            {
+              "replace": "apps/thor-frontend/src/environments/environment.ts",
+              "with": "apps/thor-frontend/src/environments/environment.staging.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/thor-frontend/src/environments/environment.ts",
+              "with": "apps/thor-frontend/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "thor-frontend:build",
+        "hmr": true,
+        "port": 5003
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "thor-frontend:build:development"
+        },
+        "production": {
+          "buildTarget": "thor-frontend:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/thor-frontend/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "apps/thor-frontend/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,241 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*  Fonts  */
+
+/* NEUBAU WEBFONTS: NB INTERNTIONAL PRO EDITION, MMXXI */
+
+@layer utilities {
+  .ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'nb_international_probold';
+    src: url('./assets/fonts/nbinternational/nbinternationalprobol-webfont.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'nb_international_proBkIt';
+    src: url('./assets/fonts/nbinternational/nbinternationalprobooita-webfont.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'nb_international_probook';
+    src: url('./assets/fonts/nbinternational/nbinternationalproboo-webfont.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'nb_international_proBdIt';
+    src: url('./assets/fonts/nbinternational/nbinternationalprobolita-webfont.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'nb_international_proregular';
+    src: url('./assets/fonts/nbinternational/nbinternationalproreg-webfont.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'nb_international_promono';
+    src: url('./assets/fonts/nbinternational/nbinternationalpromono-webfont.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'nb_international_proMdIt';
+    src: url('./assets/fonts/nbinternational/nbinternationalpromedita-webfont.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'nb_international_promedium';
+    src: url('./assets/fonts/nbinternational/nbinternationalpromed-webfont.woff2') format('woff2');
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'nb_international_proLtIt';
+    src: url('./assets/fonts/nbinternational/nbinternationalproligita-webfont.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'nb_international_prolight';
+    src: url('./assets/fonts/nbinternational/nbinternationalprolig-webfont.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'nb_international_proitalic';
+    src: url('./assets/fonts/nbinternational/nbinternationalproita-webfont.woff2') format('woff2');
+  }
+
+  * {
+    @apply antialiased;
+    font-family: 'nb_international_probook', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Font Overrides */
+
+  .font-medium {
+    font-family: 'nb_international_promedium';
+  }
+
+  .font-mono {
+    font-family: 'nb_international_promono';
+  }
+
+  .text-lg {
+    font-family: 'nb_international_proregular';
+  }
+
+  .text-xl,
+  .text-2xl,
+  .text-3xl,
+  .text-4xl {
+    font-family: 'nb_international_proregular';
+  }
+
+  strong {
+    @apply font-medium;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  span,
+  td {
+    @apply text-neutral-800;
+  }
+
+  head,
+  body,
+  #root {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  /* .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    background-color: white;
+    margin: auto auto;
+    transform: translate(-50%, -50%);
+    outline: none;
+    z-index: 10000;
+    min-width: 600px;
+  } */
+
+  /* .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 502;
+    transition: all;
+    opacity: 0.2;
+  } */
+}
+
+/* react-images */
+.react-images__view {
+  display: grid;
+  place-content: center;
+}
+
+.react-images__positioner {
+  background-color: rgba(31, 41, 55, 0.8) !important;
+}
+
+.react-images__header_button--fullscreen {
+  display: none !important;
+}
+
+.react-images__footer__count {
+  color: white !important;
+}
+
+.ReactModal__Overlay {
+  outline: none;
+  z-index: 102 !important;
+  transition: all 150ms ease-in-out !important;
+  @apply bg-black/0 !important;
+  @apply flex justify-center;
+}
+
+.ReactModal__Content {
+  outline: none;
+  position: fixed;
+  @apply rounded-xl shadow flex justify-center flex-col p-8;
+}
+
+.ReactModal__Overlay--after-open {
+  outline: none;
+  transition: all 150ms ease-in-out !important;
+  @apply bg-black/20 !important;
+}
+
+.ReactModal__Overlay--before-open {
+  outline: none;
+  opacity: 0 !important;
+  transition: all 150ms ease-in-out !important;
+}
+
+.ReactModal__Overlay--before-close {
+  outline: none;
+  opacity: 0 !important;
+}
+
+.ReactModal__Content {
+  outline: none;
+  opacity: 0 !important;
+  transition: all 150ms ease-in-out !important;
+}
+
+.ReactModal__Content--after-open {
+  outline: none;
+  opacity: 1 !important;
+  @apply transform transition-all duration-150 translate-y-6;
+}
+
+.ReactModal__Content--before-close {
+  outline: none;
+  opacity: 0 !important;
+  @apply transform transition-all duration-150 -translate-y-6;
+}
+
+.slide-in {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide-in-hide {
+  transform: translate3d(100vw, 0, 0);
+}
+
+.slide-in-show {
+  transform: translate3d(0vw, 0, 0);
+  /* overflow-y: scroll; */
+}
+
+.ql-container {
+  resize: vertical;
+}

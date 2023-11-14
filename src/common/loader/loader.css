@@ -1,0 +1,284 @@
+
+/* 
+  Generated 7/26/2023, 8:32:36 AM 
+
+  By gen-css.js
+
+  See end of file for configuration used
+*/
+
+@keyframes rotate-loader {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.thor-wrapper {
+  width: 84px;
+  height: 84px;
+  display: grid;
+  place-content: center;
+  overflow: visible;
+}
+
+.thor-loader {
+  animation: 4s infinite rotate-loader linear;
+  transform-origin: center;
+  position: relative;
+  width: 58.8px;
+  height: 58.8px;
+}
+
+.thor-ball {
+  top: calc(50% - 5px);
+  left: calc(50% - 5px);
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 999px;
+  mix-blend-mode: luminosity;
+}
+
+
+
+@keyframes ball-1 {
+  0% {
+    transform: translate(calc(cos(0deg) * 18px),
+        calc(sin(0deg) * 18px));
+  }
+
+  50% {
+    transform: translate(calc(cos(0deg) * -9px),
+        calc(sin(0deg) * -9px));
+  }
+
+  100% {
+    transform: translate(calc(cos(0deg) * 18px),
+        calc(sin(0deg) * 18px));
+  }
+}
+
+.thor-ball:nth-of-type(1) {
+  background-color: hsl(6, 19%, 52%);
+  animation: 1200ms infinite -0ms ball-1 cubic-bezier(0.45,0.05,0.55,0.95);
+}
+    
+    
+
+
+
+@keyframes ball-2 {
+  0% {
+    transform: translate(calc(cos(45deg) * 18px),
+        calc(sin(45deg) * 18px));
+  }
+
+  50% {
+    transform: translate(calc(cos(45deg) * -9px),
+        calc(sin(45deg) * -9px));
+  }
+
+  100% {
+    transform: translate(calc(cos(45deg) * 18px),
+        calc(sin(45deg) * 18px));
+  }
+}
+
+.thor-ball:nth-of-type(2) {
+  background-color: hsl(40, 42%, 88%);
+  animation: 1200ms infinite -600ms ball-2 cubic-bezier(0.45,0.05,0.55,0.95);
+}
+    
+    
+
+
+
+@keyframes ball-3 {
+  0% {
+    transform: translate(calc(cos(90deg) * 18px),
+        calc(sin(90deg) * 18px));
+  }
+
+  50% {
+    transform: translate(calc(cos(90deg) * -9px),
+        calc(sin(90deg) * -9px));
+  }
+
+  100% {
+    transform: translate(calc(cos(90deg) * 18px),
+        calc(sin(90deg) * 18px));
+  }
+}
+
+.thor-ball:nth-of-type(3) {
+  background-color: hsl(16, 19%, 52%);
+  animation: 1200ms infinite -0ms ball-3 cubic-bezier(0.45,0.05,0.55,0.95);
+}
+    
+    
+
+
+
+@keyframes ball-4 {
+  0% {
+    transform: translate(calc(cos(135deg) * 18px),
+        calc(sin(135deg) * 18px));
+  }
+
+  50% {
+    transform: translate(calc(cos(135deg) * -9px),
+        calc(sin(135deg) * -9px));
+  }
+
+  100% {
+    transform: translate(calc(cos(135deg) * 18px),
+        calc(sin(135deg) * 18px));
+  }
+}
+
+.thor-ball:nth-of-type(4) {
+  background-color: hsl(50, 42%, 88%);
+  animation: 1200ms infinite -600ms ball-4 cubic-bezier(0.45,0.05,0.55,0.95);
+}
+    
+    
+
+
+
+@keyframes ball-5 {
+  0% {
+    transform: translate(calc(cos(180deg) * 18px),
+        calc(sin(180deg) * 18px));
+  }
+
+  50% {
+    transform: translate(calc(cos(180deg) * -9px),
+        calc(sin(180deg) * -9px));
+  }
+
+  100% {
+    transform: translate(calc(cos(180deg) * 18px),
+        calc(sin(180deg) * 18px));
+  }
+}
+
+.thor-ball:nth-of-type(5) {
+  background-color: hsl(26, 19%, 52%);
+  animation: 1200ms infinite -0ms ball-5 cubic-bezier(0.45,0.05,0.55,0.95);
+}
+    
+    
+
+
+
+@keyframes ball-6 {
+  0% {
+    transform: translate(calc(cos(225deg) * 18px),
+        calc(sin(225deg) * 18px));
+  }
+
+  50% {
+    transform: translate(calc(cos(225deg) * -9px),
+        calc(sin(225deg) * -9px));
+  }
+
+  100% {
+    transform: translate(calc(cos(225deg) * 18px),
+        calc(sin(225deg) * 18px));
+  }
+}
+
+.thor-ball:nth-of-type(6) {
+  background-color: hsl(60, 42%, 88%);
+  animation: 1200ms infinite -600ms ball-6 cubic-bezier(0.45,0.05,0.55,0.95);
+}
+    
+    
+
+
+
+@keyframes ball-7 {
+  0% {
+    transform: translate(calc(cos(270deg) * 18px),
+        calc(sin(270deg) * 18px));
+  }
+
+  50% {
+    transform: translate(calc(cos(270deg) * -9px),
+        calc(sin(270deg) * -9px));
+  }
+
+  100% {
+    transform: translate(calc(cos(270deg) * 18px),
+        calc(sin(270deg) * 18px));
+  }
+}
+
+.thor-ball:nth-of-type(7) {
+  background-color: hsl(36, 19%, 52%);
+  animation: 1200ms infinite -0ms ball-7 cubic-bezier(0.45,0.05,0.55,0.95);
+}
+    
+    
+
+
+
+@keyframes ball-8 {
+  0% {
+    transform: translate(calc(cos(315deg) * 18px),
+        calc(sin(315deg) * 18px));
+  }
+
+  50% {
+    transform: translate(calc(cos(315deg) * -9px),
+        calc(sin(315deg) * -9px));
+  }
+
+  100% {
+    transform: translate(calc(cos(315deg) * 18px),
+        calc(sin(315deg) * 18px));
+  }
+}
+
+.thor-ball:nth-of-type(8) {
+  background-color: hsl(70, 42%, 88%);
+  animation: 1200ms infinite -600ms ball-8 cubic-bezier(0.45,0.05,0.55,0.95);
+}
+    
+    
+
+
+/* 
+  Configuration (as json)
+
+{
+  "size": 84,
+  "distanceToCenter": "-9px",
+  "ballBezier": "cubic-bezier(0.45,0.05,0.55,0.95)",
+  "ballCount": 8,
+  "duration": 1200,
+  "modulo": 2,
+  "distanceFromCenter": "18px",
+  "ballSize": 10,
+  "colors": [
+    {
+      "hue": 26,
+      "sat": 19,
+      "lig": 52,
+      "delta": 40
+    },
+    {
+      "hue": 55,
+      "sat": 42,
+      "lig": 88,
+      "delta": 40
+    }
+  ],
+  "mixBlendMode": "luminosity"
+}
+*/

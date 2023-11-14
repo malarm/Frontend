@@ -1,0 +1,8 @@
+.chat-gpt-thingy {
+  grid-template-columns: 28px;
+  transition: grid-template-columns 250ms;
+}
+
+.chat-gpt-thingy:hover {
+  grid-template-columns: 1fr;
+}
